@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import HeroSection from './components/HeroSection.vue'
 import ClientLogosSection from './components/ClientLogosSection.vue'
 import FeaturesSection from './components/FeaturesSection.vue'

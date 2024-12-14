@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/App.vue","./src/components/ClientLogosSection.vue","./src/components/FAQSection.vue","./src/components/FeatureCard.vue","./src/components/FeaturesSection.vue","./src/components/HelloWorld.vue","./src/components/HeroSection.vue","./src/components/OmnichannelSection.vue","./src/components/PricingCard.vue"],"version":"5.7.2"}
