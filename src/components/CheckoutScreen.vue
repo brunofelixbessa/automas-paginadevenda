@@ -5,7 +5,7 @@
     <div class="bg-white p-8 rounded-lg shadow-lg w-96">
       <h2 class="text-2xl font-bold mb-4">Confirme seus dados</h2>
       <p class="mb-4">Você escolheu o plano: {{ plan.name }}</p>
-      <form @submit.prevent="handleSubmit">
+      <form @submit.prevent="handleSubmit" v-if="!successMessage">
         <div class="mb-4">
           <label for="name" class="block text-gray-700 text-sm font-bold mb-2"
             >Nome</label
@@ -38,23 +38,35 @@
             type="tel"
             id="phone"
             v-model="phone"
+            v-mask="'+55 (##) #####-####'"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required
           />
         </div>
         <div class="flex justify-end">
-          <button type="submit" class="btn-primary mr-2">Confirmar</button>
+          <button type="submit" class="btn-primary mr-2" :disabled="loading">
+            <span v-if="loading">Enviando...</span>
+            <span v-else>Confirmar</span>
+          </button>
           <button type="button" class="btn-secondary" @click="$emit('close')">
             Cancelar
           </button>
         </div>
       </form>
+      <div v-if="successMessage" class="text-center">
+        <p class="text-green-500 font-bold mb-4">{{ successMessage }}</p>
+        <button type="button" class="btn-primary" @click="$emit('close')">
+          Fechar
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { mask } from "vue-the-mask";
+import { sendTextMessage } from "../services/api";
 
 const emit = defineEmits(["close"]);
 
@@ -68,15 +80,23 @@ const props = defineProps({
 const name = ref("");
 const email = ref("");
 const phone = ref("");
+const loading = ref(false);
+const successMessage = ref("");
 
-const handleSubmit = () => {
-  console.log(
-    "Simulating sending email to brunofelixbessa@gmail.com with the following data:"
-  );
-  console.log("Name:", name.value);
-  console.log("Email:", email.value);
-  console.log("Phone:", phone.value);
-  console.log("Plan:", props.plan);
-  emit("close");
+const handleSubmit = async () => {
+  loading.value = true;
+  const message = `Novo pedido!\nPlano: ${props.plan.name}\nNome: ${name.value}\nEmail: ${email.value}\nTelefone: ${phone.value}`;
+  try {
+    await sendTextMessage(message);
+    successMessage.value = "Formulário enviado com sucesso!";
+    console.log("Message sent successfully");
+  } catch (error) {
+    console.error("Failed to send message", error);
+    successMessage.value = "Erro ao enviar o formulário.";
+  } finally {
+    loading.value = false;
+  }
 };
+
+onMounted(() => {});
 </script>
