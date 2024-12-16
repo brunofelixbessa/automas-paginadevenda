@@ -1,4 +1,3 @@
-// @ts-nocheck
 <script setup lang="ts">
 import { ref } from "vue";
 import HeroSection from "./components/HeroSection.vue";
@@ -10,6 +9,7 @@ import DashboardSection from "./components/DashboardSection.vue";
 import CheckoutScreen from "./components/CheckoutScreen.vue";
 import Header from "./components/Header.vue";
 import PricingSection from "./components/PricingSection.vue";
+import AnimatedIconsSection from "./components/AnimatedIconsSection.vue";
 
 const showCheckout = ref(false);
 const selectedPlan = ref({});
@@ -18,8 +18,10 @@ const selectedPlan = ref({});
 <template>
   <div>
     <Header />
+
     <HeroSection />
     <DashboardSection />
+    <AnimatedIconsSection />
     <FeaturesSection />
     <OmnichannelSection />
     <ClientLogosSection />
