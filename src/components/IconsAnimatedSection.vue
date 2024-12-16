@@ -11,7 +11,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from "vue";
 
 const baseIcons = [
@@ -33,7 +33,7 @@ const baseIcons = [
   "share-alt",
 ];
 
-const icons = ref([]);
+const icons = ref<string[]>([]);
 
 function generateIcons() {
   baseIcons.forEach((icon) => {
@@ -46,7 +46,7 @@ function generateIcons() {
 
 generateIcons();
 
-function getIconClass(icon) {
+function getIconClass(icon: string) {
   if (icon === "envelope") {
     return "fa fa-envelope";
   } else if (icon === "comment") {
@@ -92,8 +92,8 @@ onMounted(() => {
   });
 });
 
-function animateIcon(container) {
-  const icon = container.querySelector("i");
+function animateIcon(container: Element) {
+  const icon = container.querySelector("i") as HTMLElement;
   const randomX = Math.random() * 100 - 50;
   const randomY = Math.random() * 100 - 50;
   const randomDelay = Math.random() * 5;
