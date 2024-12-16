@@ -8,6 +8,7 @@ import PricingCard from "./components/PricingCard.vue";
 import FAQSection from "./components/FAQSection.vue";
 import DashboardSection from "./components/DashboardSection.vue";
 import CheckoutScreen from "./components/CheckoutScreen.vue";
+import Header from "./components/Header.vue";
 
 const plans = [
   {
@@ -62,6 +63,7 @@ const handleSelectPlan = (plan: any) => {
 
 <template>
   <div>
+    <Header />
     <HeroSection />
     <DashboardSection />
     <FeaturesSection />
