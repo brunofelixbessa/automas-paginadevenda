@@ -1,44 +1,42 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import CheckoutScreen from "./CheckoutScreen.vue";
-
-interface Plan {
+const props = defineProps<{
   name: string;
   price: string;
   features: string[];
   recommended: boolean;
-}
-
-defineProps<{
-  plan: Plan;
 }>();
 
-const showCheckout = ref(false);
+const emit = defineEmits(["select-plan"]);
 
 const handleCheckout = () => {
-  showCheckout.value = true;
+  emit("select-plan", {
+    name: props.name,
+    price: props.price,
+    features: props.features,
+    recommended: props.recommended,
+  });
 };
 </script>
 
 <template>
   <div
     class="card-hover rounded-xl overflow-hidden shadow-lg bg-white relative"
-    :class="{ 'border-2 border-[#25D366]': plan.recommended }"
+    :class="{ 'border-2 border-[#25D366]': recommended }"
   >
-    <div v-if="plan.recommended" class="absolute top-4 right-4">
+    <div v-if="recommended" class="absolute top-4 right-4">
       <span class="bg-[#25D366] text-white px-3 py-1 rounded-full text-sm"
         >Recomendado</span
       >
     </div>
     <div class="p-8">
-      <h3 class="text-2xl font-bold mb-4">{{ plan.name }}</h3>
+      <h3 class="text-2xl font-bold mb-4">{{ name }}</h3>
       <div class="mb-6">
-        <span class="text-4xl font-bold">{{ plan.price }}</span>
+        <span class="text-4xl font-bold">{{ price }}</span>
         <span class="text-gray-600">/mês</span>
       </div>
       <ul class="space-y-4 mb-8">
         <li
-          v-for="feature in plan.features"
+          v-for="feature in features"
           :key="feature"
           class="flex items-center"
         >
@@ -59,12 +57,11 @@ const handleCheckout = () => {
       </ul>
       <button
         class="w-full btn-primary"
-        :class="{ 'bg-[#25D366] hover:bg-[#128C7E]': plan.recommended }"
+        :class="{ 'bg-[#25D366] hover:bg-[#128C7E]': recommended }"
         @click="handleCheckout"
       >
         Assinar
       </button>
     </div>
-    <CheckoutScreen v-if="showCheckout" @close="showCheckout = false" />
   </div>
 </template>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import HeroSection from "./components/HeroSection.vue";
 import ClientLogosSection from "./components/ClientLogosSection.vue";
 import FeaturesSection from "./components/FeaturesSection.vue";
@@ -6,6 +7,7 @@ import OmnichannelSection from "./components/OmnichannelSection.vue";
 import PricingCard from "./components/PricingCard.vue";
 import FAQSection from "./components/FAQSection.vue";
 import DashboardSection from "./components/DashboardSection.vue";
+import CheckoutScreen from "./components/CheckoutScreen.vue";
 
 const plans = [
   {
@@ -48,6 +50,14 @@ const plans = [
     recommended: false,
   },
 ];
+
+const showCheckout = ref(false);
+const selectedPlan = ref({});
+
+const handleSelectPlan = (plan: any) => {
+  selectedPlan.value = plan;
+  showCheckout.value = true;
+};
 </script>
 
 <template>
@@ -62,7 +72,15 @@ const plans = [
       <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-16">Planos e Preços</h2>
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingCard v-for="plan in plans" :key="plan.name" :plan="plan" />
+          <PricingCard
+            v-for="plan in plans"
+            :key="plan.name"
+            :name="plan.name"
+            :price="plan.price"
+            :features="plan.features"
+            :recommended="plan.recommended"
+            @select-plan="handleSelectPlan"
+          />
         </div>
       </div>
     </section>
@@ -98,5 +116,10 @@ const plans = [
         </div>
       </div>
     </footer>
+    <CheckoutScreen
+      v-if="showCheckout"
+      :plan="selectedPlan"
+      @close="showCheckout = false"
+    />
   </div>
 </template>
