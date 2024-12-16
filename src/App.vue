@@ -9,7 +9,7 @@ import DashboardSection from "./components/DashboardSection.vue";
 import CheckoutScreen from "./components/CheckoutScreen.vue";
 import Header from "./components/Header.vue";
 import PricingSection from "./components/PricingSection.vue";
-import AnimatedIconsSection from "./components/AnimatedIconsSection.vue";
+import IconsAnimatedSection from "./components/IconsAnimatedSection.vue";
 
 const showCheckout = ref(false);
 const selectedPlan = ref({});
@@ -18,10 +18,9 @@ const selectedPlan = ref({});
 <template>
   <div>
     <Header />
-
     <HeroSection />
     <DashboardSection />
-    <AnimatedIconsSection />
+    <IconsAnimatedSection />
     <FeaturesSection />
     <OmnichannelSection />
     <ClientLogosSection />
