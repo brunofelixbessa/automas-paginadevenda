@@ -2,21 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: #25D366;
-  --secondary-color: #128C7E;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  @apply bg-gray-50;
-}
-
 .btn-primary {
-  @apply bg-[#25D366] text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#128C7E] transition-colors duration-300;
+  @apply bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-2 px-4 rounded;
+}
+
+.btn-secondary {
+  @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded;
 }
 
 .card-hover {
-  @apply transition-transform duration-300 hover:-translate-y-2;
+  transition: transform 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
 }
