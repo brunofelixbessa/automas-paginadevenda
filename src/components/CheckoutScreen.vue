@@ -65,7 +65,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { mask } from "vue-the-mask";
 import { sendTextMessage } from "../services/api";
 
 const emit = defineEmits(["close"]);

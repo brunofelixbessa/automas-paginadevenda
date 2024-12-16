@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import PricingCard from "./PricingCard.vue";
+import CheckoutScreen from "./CheckoutScreen.vue";
 
 const plans = [
   {
@@ -68,6 +69,11 @@ const handleSelectPlan = (plan: any) => {
           @select-plan="handleSelectPlan"
         />
       </div>
+      <CheckoutScreen
+        v-if="showCheckout"
+        :plan="selectedPlan"
+        @close="showCheckout = false"
+      />
     </div>
   </section>
 </template>
