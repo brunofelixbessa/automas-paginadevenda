@@ -49,8 +49,8 @@ const selectedPlan = ref({});
       <div class="container mx-auto px-4">
         <div class="text-center">
           <p>
-            &copy; 2024 WhatsApp Management System. Todos os direitos
-            reservados.
+            &copy; 2024 Futura Tecnologia LTDA - 50069157000141. Todos os
+            direitos reservados.
           </p>
         </div>
       </div>
