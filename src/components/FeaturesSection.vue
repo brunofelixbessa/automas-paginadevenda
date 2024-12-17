@@ -5,7 +5,7 @@ const features = [
   {
     title: "Multiplas Contas",
     description:
-      "Gerencie todas as suas contas de atendimento em uma única instalação do ChatWoot.",
+      "Gerencie todas as suas contas de atendimento em uma única plataforma.",
     icon: "M12 4.354a4 4 0 110 5.292V4.354zM15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
   },
   {
@@ -29,7 +29,7 @@ const features = [
   {
     title: "REST API",
     description:
-      "A API REST permite que você integre o ChatWoot com outros sistemas como o N8N, Appsmith, etc.",
+      "A API REST permite que você integre com outros sistemas como o N8N, TypeBoot, Seus sistemas, etc.",
     icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
   },
   {
