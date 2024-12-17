@@ -10,10 +10,14 @@
       </div>
       <ul class="hidden md:flex space-x-6">
         <li>
-          <a href="#" class="text-gray-700 hover:text-gray-900">Recursos</a>
+          <a href="#recursos" class="text-gray-700 hover:text-gray-900"
+            >Recursos</a
+          >
         </li>
         <li>
-          <a href="#" class="text-gray-700 hover:text-gray-900">Preços</a>
+          <a href="#pricing" class="text-gray-700 hover:text-gray-900"
+            >Preços</a
+          >
         </li>
         <li>
           <a href="#" class="text-gray-700 hover:text-gray-900">Contato</a>
