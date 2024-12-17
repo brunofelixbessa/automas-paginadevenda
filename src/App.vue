@@ -20,7 +20,7 @@ const selectedPlan = ref({});
     <Header />
     <HeroSection />
     <DashboardSection />
-    <IconsAnimatedSection />
+    <!-- <IconsAnimatedSection /> -->
     <FeaturesSection />
     <OmnichannelSection />
     <ClientLogosSection />

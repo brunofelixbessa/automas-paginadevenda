@@ -108,12 +108,17 @@ function animateIcon(container: Element) {
 
 <style scoped>
 .animated-icons-section {
+  position: absolute;
+  width: 100%;
+}
+
+/* .animated-icons-section {
   position: relative;
   width: 100%;
   height: 400px;
   overflow: hidden;
   background-color: #f0f0f0;
-}
+} */
 
 .icon-container {
   position: absolute;

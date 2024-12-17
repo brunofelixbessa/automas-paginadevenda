@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import IconsAnimatedSection from "./IconsAnimatedSection.vue";
+
 const scrollToPricing = () => {
   const pricingSection = document.getElementById("pricing");
   if (pricingSection) {
@@ -8,8 +10,11 @@ const scrollToPricing = () => {
 </script>
 
 <template>
-  <header class="bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white py-20">
-    <div class="container mx-auto px-4 text-center">
+  <header
+    class="bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white py-20 relative overflow-hidden"
+  >
+    <IconsAnimatedSection />
+    <div class="container mx-auto px-4 text-center relative z-10">
       <h1 class="text-5xl font-bold mb-6">
         Gerencie suas conversas do WhatsApp como um profissional
       </h1>
