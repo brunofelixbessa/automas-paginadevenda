@@ -20,7 +20,7 @@ const scrollToPricing = () => {
       </h1>
       <p class="text-xl mb-8 max-w-2xl mx-auto">
         Automatize, organize e potencialize seu atendimento com nossa plataforma
-        completa de gestão de WhatsApp <br /><br />Teste por 30 dias gratis<br /><br />
+        completa de gestão de WhatsApp <br /><br />Comece de graça<br /><br />
         Conecte seu WhatsApp em poucos minutos tenha todos seus atendentes
         compartilhando o mesmo número. Não perca mais vendas.
       </p>

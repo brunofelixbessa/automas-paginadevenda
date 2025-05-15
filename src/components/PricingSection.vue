@@ -5,25 +5,35 @@ import CheckoutScreen from "./CheckoutScreen.vue";
 
 const plans = [
   {
-    name: "Básico",
-    price: "R$ 79,90",
+    name: "FREE",
+    price: "R$ 0,00",
     features: [
-      "Até 2000 conversas por mês",
-      "2 caixas de entrada",
-      "Email",
+      "1 caixas de entrada",
       "Live Chat",
       "Respostas automáticas básicas",
-      "2 usuário",
+      "1 usuário",
       "Relatórios básicos",
-      "Suporte por chat",
     ],
     recommended: false,
   },
+  // {
+  //   name: "Básico",
+  //   price: "R$ 79,90",
+  //   features: [
+  //     "2 caixas de entrada",
+  //     "Email",
+  //     "Live Chat",
+  //     "Respostas automáticas básicas",
+  //     "até 2 usuário",
+  //     "Relatórios básicos",
+  //     "Suporte por chat",
+  //   ],
+  //   recommended: false,
+  // },
   {
     name: "Profissional",
     price: "R$ 149,90",
     features: [
-      "Até 10000 conversas por mês",
       "3 caixas de entrada",
       "1 WhatsApp",
       "Chatbot personalizado",
@@ -45,7 +55,7 @@ const plans = [
       "Usuários (validar)",
       "Relatórios personalizados",
       "API de integração",
-      "Suporte por personalizado",
+      "Suporte personalizado",
     ],
     recommended: false,
   },
