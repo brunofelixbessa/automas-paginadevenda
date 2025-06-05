@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import dashboardImage from "../assets/dashboard.png";
+import dashboardImage from "../assets/dashboard3.png";
 </script>
 
 <template>

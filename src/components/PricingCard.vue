@@ -57,7 +57,7 @@ const handleCheckout = () => {
       </ul>
       <button
         class="w-full btn-primary"
-        :class="{ 'bg-[#25D366] hover:bg-[#128C7E]': recommended }"
+        :class="{ 'bg-[#25D366] hover:bg-[#1EB178]': recommended }"
         @click="handleCheckout"
       >
         Assinar

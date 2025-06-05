@@ -4,7 +4,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 const DEFAULT_NUMBER = import.meta.env.VITE_DEFAULT_NUMBER;
 
 const api = axios.create({
-  baseURL: 'https://api.automas.me',
+  baseURL: 'https://api.intalk.pro',
   headers: {
     'apikey': API_KEY,
     'Content-Type': 'application/json',

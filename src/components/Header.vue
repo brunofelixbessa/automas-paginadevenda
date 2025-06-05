@@ -4,7 +4,7 @@
       <div class="flex items-center">
         <img
           src="../assets/LogoNovoSemFundo.png"
-          alt="Automas Logo"
+          alt="Intalk Logo"
           class="h-8 mr-4"
         />
       </div>
@@ -41,7 +41,7 @@
           </svg>
         </button>
         <a
-          href="https://atendimento.automas.me/"
+          href="https://chat.intalk.pro"
           target="_blank"
           class="btn-primary"
         >

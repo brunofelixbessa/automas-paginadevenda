@@ -18,7 +18,7 @@
           Centro de Suporte Omnichannel
         </h2>
         <p class="text-lg md:text-xl leading-relaxed opacity-90">
-          O Automas se conecta com canais populares de comunicação com o
+          O Intalk se conecta com canais populares de comunicação com o
           cliente, como Email, chat ao vivo no site, Facebook, WhatsApp,
           Instagram, entre outros. Isso permite oferecer uma experiência
           consistente ao cliente através de diversos canais - tudo a partir de

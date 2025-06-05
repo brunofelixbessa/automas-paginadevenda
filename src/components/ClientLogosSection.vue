@@ -43,7 +43,7 @@ const duplicatedClients = [...clients, ...clients];
       <h2
         class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12"
       >
-        Mais de 1500 clientes já usam e confiam no Automas
+        Mais de 1500 clientes já usam e confiam no Intalk
       </h2>
 
       <div class="relative">
