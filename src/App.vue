@@ -13,6 +13,7 @@ import PricingSection from "./components/PricingSection.vue";
 
 const showCheckout = ref(false);
 const selectedPlan = ref({});
+
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const selectedPlan = ref({});
     <FAQSection />
 
     <!-- CTA Section -->
-    <section class="bg-[#1EB178] text-white py-16">
+    <section class="bg-[#2781f6] text-white py-16">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-6">
           Pronto para revolucionar seu atendimento?
@@ -37,7 +38,7 @@ const selectedPlan = ref({});
           no WhatsApp.
         </p>
         <button
-          class="bg-white text-[#1EB178] font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-colors"
+          class="bg-white text-[#2781f6] font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-colors"
         >
           Experimente Grátis por 30 Dias
         </button>

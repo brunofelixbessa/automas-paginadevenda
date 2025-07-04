@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-    <div class="bg-gradient-to-r from-[#1EB178] to-[#25D366] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+    <div class="bg-gradient-to-r from-[#2781f6] to-[#1f93ff] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         class="h-6 w-6 text-white" 

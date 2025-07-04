@@ -20,20 +20,22 @@ const handleCheckout = () => {
 
 <template>
   <div
-    class="card-hover rounded-xl overflow-hidden shadow-lg bg-white relative"
-    :class="{ 'border-2 border-[#25D366]': recommended }"
+    class="card-hover rounded-xl overflow-hidden shadow-lg bg-white relative flex flex-col"
+    :class="{ 'border-2 border-[#1f93ff]': recommended }"
   >
     <div v-if="recommended" class="absolute top-4 right-4">
-      <span class="bg-[#25D366] text-white px-3 py-1 rounded-full text-sm"
+      <span class="bg-[#1f93ff] text-white px-3 py-1 rounded-full text-sm"
         >Recomendado</span
       >
     </div>
-    <div class="p-8">
+
+    <div class="p-8 flex flex-col flex-grow">
       <h3 class="text-2xl font-bold mb-4">{{ name }}</h3>
       <div class="mb-6">
         <span class="text-4xl font-bold">{{ price }}</span>
         <span class="text-gray-600">/mês</span>
       </div>
+
       <ul class="space-y-4 mb-8">
         <li
           v-for="feature in features"
@@ -42,7 +44,7 @@ const handleCheckout = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-[#25D366] mr-2"
+            class="h-5 w-5 text-[#1f93ff] mr-2"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -55,13 +57,16 @@ const handleCheckout = () => {
           {{ feature }}
         </li>
       </ul>
-      <button
-        class="w-full btn-primary"
-        :class="{ 'bg-[#25D366] hover:bg-[#1EB178]': recommended }"
-        @click="handleCheckout"
-      >
-        Assinar
-      </button>
+
+      <div class="mt-auto">
+        <button
+          class="w-full btn-primary"
+          :class="{ 'bg-[#1f93ff] hover:bg-[#2781f6]': recommended }"
+          @click="handleCheckout"
+        >
+          Assinar
+        </button>
+      </div>
     </div>
   </div>
 </template>

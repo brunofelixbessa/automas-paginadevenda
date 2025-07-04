@@ -30,21 +30,22 @@
    
     <div id="app"></div>
         <script type="module" src="/src/main.ts"></script>
+
         <script>
-      (function(d,t) {
-        var BASE_URL="https://chat.intalk.pro";
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
-          window.chatwootSDK.run({
-            websiteToken: 'Yr31y9rGC3zApEV34H54NEXG',
-            baseUrl: BASE_URL
-          })
-        }
-      })(document,"script");
+          (function(d,t) {
+            var BASE_URL="https://chat.intalk.pro";
+            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=BASE_URL+"/packs/js/sdk.js";
+            g.defer = true;
+            g.async = true;
+            s.parentNode.insertBefore(g,s);
+            g.onload=function(){
+              window.chatwootSDK.run({
+                websiteToken: 'iEpagkGBYFVn6cAMfiUiHJ5M',
+                baseUrl: BASE_URL
+              })
+            }
+          })(document,"script");
     </script>
   </body>
 </html>

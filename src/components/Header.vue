@@ -3,9 +3,9 @@
     <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center">
         <img
-          src="../assets/LogoNovoSemFundo.png"
+          src="../assets/intal_chatwoot_logo_b.png"
           alt="Intalk Logo"
-          class="h-8 mr-4"
+          class="h-8 mr-4 logo"
         />
       </div>
       <ul class="hidden md:flex space-x-6">
@@ -71,3 +71,10 @@ onMounted(() => {
   }
 });
 </script>
+
+<style scoped>
+.logo {
+  height: 32px;
+  width: auto;
+}
+</style>

@@ -11,7 +11,7 @@ const scrollToPricing = () => {
 
 <template>
   <header
-    class="bg-gradient-to-r from-[#1EB178] to-[#25D366] text-white py-20 relative overflow-hidden"
+    class="bg-gradient-to-r from-[#2781f6] to-[#1f93ff] text-white py-20 relative overflow-hidden"
   >
     <IconsAnimatedSection />
     <div class="container mx-auto px-4 text-center relative z-10">
@@ -26,7 +26,7 @@ const scrollToPricing = () => {
       </p>
       <button
         @click="scrollToPricing"
-        class="bg-white text-[#1EB178] font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-colors"
+        class="bg-white text-[#2781f6] font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-colors"
       >
         Começar Agora
       </button>

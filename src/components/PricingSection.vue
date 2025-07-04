@@ -37,7 +37,7 @@ const plans = [
       "3 caixas de entrada",
       "1 WhatsApp",
       "Chatbot personalizado",
-      "até 5 usuários",
+      "até 15 usuários*(validar)",
       "Relatórios avançados",
       "API de integração",
       "Suporte por chat",
